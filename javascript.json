@@ -1,0 +1,115 @@
+{
+	"Console Log":{
+		"prefix": "cl",
+		"body": "console.log($1)"
+	},
+
+	"Named Function": {
+		"prefix": "fnc",
+		"body": [
+		  "function ${1:functionName}($2) {",
+		  "    $3",
+		  "}"
+		],
+		"description": "Named Function"
+	  },
+	 
+	  "Array methods function": {
+		"prefix": "arrm",
+		"body": [
+		  "${1:example}.${2|forEach,map,filter,reduce,some|}((${3:item})=>{",
+		  "    $4",
+		  "});"
+		],
+		"description": "Array methods function"
+	  },
+	  
+	  "Function Expression": {
+		"prefix": "fnexp",
+		"body": [
+		  "let ${1:name} = function(${2:parameter}) {",
+		  "    $3",
+		  "};"
+		],
+		"description": "Function Expression"
+	  },
+
+	  "Document.querySelector": {
+		"prefix": "dq",
+		"body": [
+		  "document.querySelector(\"$1\")"
+		],
+		"description": "Document.querySelector"
+	  },
+
+	  "addEventListener": {
+		"prefix": "el",
+		"body": [
+		  ".addEventListener(\"${1:event}\", function(${2:e}) {",
+		  "    $3",
+		  "});"
+		],
+		"description": "addEventListener"
+	  },
+
+	  "Fetch api": {
+		"prefix": "fetchapi",
+		"body": [
+		  " fetch(`$1`)",
+		  "         .then(${2:value} => ${3:value}.json())",
+		  "         .then(${4:data} =>  console.log(${5:data}) )",
+		  "         .catch(${6:err} =>  console.log(${7:err}) )"
+		],
+		"description": "Fetch api"
+	  },
+
+
+	  "OOP": {
+		"prefix": "oop",
+		"body": [
+		  "class ${1:Person} {",
+		  "    constructor(${2:fName}, ${3:lName}, ${4:age}) {",
+		  "        this.${5:firstName} = ${6:fName};",
+		  "        this.${7:lastName} = ${8:lName};",
+		  "        this.${9:age} = ${10:age};",
+		  "    }",
+		  "    ${11:fullName}() {",
+		  "        return `Full name: ${this.${12:firstName}} ${this.${13:lastName}}`",
+		  "    }",
+		  "}"
+		],
+		"description": "OOP"
+	  },
+
+
+	  "Oject declering using oop": {
+		"prefix": "oopinput",
+		"body": [
+		  "let ${1:person1} = new ${2:Person}($3)"
+		],
+		"description": "Oject declering using oop"
+	  },
+
+
+
+	"OOP extending / inheritance": {
+		"prefix": "oopextend",
+		"body": [
+		  "class ${1:Customer} extends ${2:Person} {",
+		  "    constructor(${3:fName}, ${4:lName}, ${5:age}, ${6:country}) {",
+		  "        super(${7:fName}, ${8:lName}, ${9:age});",
+		  "        this.${10:country} = ${11:country};",
+		  "    }",
+		  "    static ${12:greetings}($13) {",
+		  "        return `Hello `",
+		  "    }",
+		  "    ${14:customerInfo}() {",
+		  "        return `Full name: ${this.${15:firstName}} ${this.${16:lastName}}, age: ${this.${17:age}}, Country: ${this.${18:country}}`",
+		  "    }",
+		  "};",
+		  ""
+		],
+		"description": "OOP extending / inheritance"
+	  }
+
+}
