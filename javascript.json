@@ -14,6 +14,17 @@
 		"description": "Named Function"
 	  },
 	 
+	 "for loop": {
+		"prefix": "frl",
+		"body": [
+		  "for(let ${1:i} = ${2:0}; ${3:i}<=${4:10}; ${5:i}++){",
+		  "    $6",
+		  "};"
+		],
+		"description": "for loop"
+	  },
+	
+	
 	  "Array methods function": {
 		"prefix": "arrm",
 		"body": [
